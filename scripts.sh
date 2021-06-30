@@ -1,6 +1,12 @@
 #Note: Please make sure to chanage the IP addresses (nodes and PODS) to match your installation! 
 
 ssh root@192.168.0.41
+
+#Deploy a simple hello world from Google 
+kubectl create deploymenthello-app --image=gcr.io/google-samples/hello-app:1.0 
+#Scale up the replica set to 4
+kubectl scale --replicas=4 deployment/hello-world
+
 #Get interfaces on this node (Node 1)
 ip addr
 #Show veth sets
@@ -16,26 +22,6 @@ ip route get 172.16.94.6
 #Get route to POD with IP: 172.16.61.206 (on Node Master)
 ip route get 172.16.61.206
 
-
-
-
-
-
-ip addr
-ip route
-ip link  show type veth
-ip link show type ipip
-
-ip link show tunl0
-
-
-
-
-
-#Deploy a simple hello world from Google 
-kubectl create deploymenthello-app --image=gcr.io/google-samples/hello-app:1.0 
-#Scale up the replica set to 4
-#kubectl scale --replicas=4 deployment/hello-world
 
 kubectl get services
 
