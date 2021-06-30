@@ -1,4 +1,4 @@
-#Note: Please make sure to chanage the IP addresses (nodes and PODS) to match your installation! 
+#Note: Please make sure to change the IP addresses (nodes and PODS) to match your installation! 
 
 ssh root@192.168.0.41
 
