@@ -3,7 +3,7 @@
 ssh root@192.168.0.41
 
 #Deploy a simple hello world from Google 
-kubectl create deploymenthello-app --image=gcr.io/google-samples/hello-app:1.0 
+kubectl create deployment hello-app --image=gcr.io/google-samples/hello-app:1.0 
 #Scale up the replica set to 4
 kubectl scale --replicas=4 deployment/hello-world
 
